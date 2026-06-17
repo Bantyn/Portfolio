@@ -1,0 +1,1 @@
+npm i react-router-dom framer-motion gsap lenis tailwindcss clsx @tailwindcss/vite
