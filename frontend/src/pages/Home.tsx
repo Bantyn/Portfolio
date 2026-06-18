@@ -118,7 +118,7 @@ function HeroSection() {
           }}
           className="grid grid-cols-12 items-center w-full my-auto gap-4 relative z-0"
         >
-          {/* Left: A VISUAL */}
+          {/* Left: Full Stack */}
           <motion.div 
             style={{ opacity: textOpacity, x: leftTextX }}
             className="col-span-3 flex justify-end items-center text-right pr-2 md:pr-8"
@@ -127,7 +127,7 @@ function HeroSection() {
               style={{ fontFamily: "'Anton', sans-serif" }}
               className="text-[4.2vw] md:text-[3.8vw] lg:text-[3.5vw] font-normal uppercase leading-none text-theme-950"
             >
-              A Visual
+              Full Stack
             </h2>
           </motion.div>
 
@@ -138,7 +138,7 @@ function HeroSection() {
               style={{ opacity: textOpacity }}
               className="w-full max-w-[480px] flex justify-between items-center mb-2 px-1 text-[9px] md:text-[12px] font-sans text-theme-950/70 tracking-widest uppercase"
             >
-              <motion.span style={{ x: topLeftTextX }}>MOTION DESIGN</motion.span>
+              <motion.span style={{ x: topLeftTextX }}>WEB DEVELOPMENT</motion.span>
               <motion.span style={{ x: topRightTextX }}>2026</motion.span>
             </motion.div>
             
@@ -172,7 +172,7 @@ function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right: DESIGNER */}
+          {/* Right: Developer */}
           <motion.div 
             style={{ opacity: textOpacity, x: rightTextX }}
             className="col-span-3 flex justify-start items-center text-left pl-2 md:pl-8"
@@ -181,7 +181,7 @@ function HeroSection() {
               style={{ fontFamily: "'Anton', sans-serif" }}
               className="text-[4.2vw] md:text-[3.8vw] lg:text-[3.5vw] font-normal uppercase leading-none text-theme-950"
             >
-              Designer
+              Developer
             </h2>
           </motion.div>
         </motion.div>
@@ -213,10 +213,10 @@ function CreatingMotionSection() {
     <section className="w-full min-h-[80vh] bg-[#2C1E16] text-[#F0EADA] flex flex-col items-center justify-center py-24 md:py-32 px-4 overflow-hidden relative">
       <div className="relative w-full max-w-[1400px] flex flex-col items-center gap-6 md:gap-12 mt-8">
         
-        {/* Line 1: CREATING + small text */}
+        {/* Line 1: BUILDING + small text */}
         <div className="relative flex items-center justify-center w-full">
           <div className="absolute left-2 md:left-[10%] lg:left-[15%] -top-4 md:-top-2 text-right text-[8px] md:text-sm font-sans tracking-wide text-[#F0EADA]/90">
-            PURPOSEFUL<br/>DESIGN
+            MODERN WEB<br/>APPLICATIONS
           </div>
           <div className="relative overflow-hidden inline-flex p-3">
             {/* Shutter sliding Right */}
@@ -240,7 +240,7 @@ function CreatingMotionSection() {
               style={{ fontFamily: "'Anton', sans-serif", transform: "scaleY(1.15)" }} 
               className="text-[17vw] md:text-[14vw] lg:text-[12vw] leading-none m-0 uppercase tracking-tight flex"
             >
-              {"CREATING".split("").map((char, index) => (
+              {"BUILDING".split("").map((char, index) => (
                 <span key={index} className="overflow-hidden inline-block h-[1.15em] relative">
                   <motion.span variants={letterVariants} className="inline-block relative">
                     {char === " " ? "\u00A0" : char}
@@ -251,7 +251,7 @@ function CreatingMotionSection() {
           </div>
         </div>
 
-        {/* Line 2: MOTION + small text */}
+        {/* Line 2: DIGITAL + small text */}
         <div className="relative flex items-center justify-center w-full">
           <div className="relative overflow-hidden inline-flex p-3">
             {/* Shutter sliding Left */}
@@ -275,7 +275,7 @@ function CreatingMotionSection() {
               style={{ fontFamily: "'Anton', sans-serif", transform: "scaleY(1.15)" }} 
               className="text-[17vw] md:text-[14vw] lg:text-[12vw] leading-none m-0 uppercase tracking-tight flex"
             >
-              {"MOTION".split("").map((char, index) => (
+              {"DIGITAL".split("").map((char, index) => (
                 <span key={index} className="overflow-hidden inline-block h-[1.15em] relative">
                   <motion.span variants={letterVariants} className="inline-block relative">
                     {char === " " ? "\u00A0" : char}
@@ -285,11 +285,11 @@ function CreatingMotionSection() {
             </motion.h2>
           </div>
           <div className="absolute right-2 md:right-[5%] lg:right-[15%] -bottom-4 md:-bottom-2 text-left text-[8px] md:text-sm font-sans tracking-wide text-[#F0EADA]/90">
-            NARRATIVE THROUGH<br/>ANIMATION
+            WITH PURPOSE &<br/>PERFORMANCE
           </div>
         </div>
 
-        {/* Line 3: WITH MEANING */}
+        {/* Line 3: EXPERIENCES */}
         <div className="relative flex items-center justify-center w-full">
           <div className="relative overflow-hidden inline-flex p-3">
             {/* Shutter sliding Right */}
@@ -313,7 +313,7 @@ function CreatingMotionSection() {
               style={{ fontFamily: "'Anton', sans-serif", transform: "scaleY(1.15)" }} 
               className="text-[17vw] md:text-[14vw] lg:text-[12vw] leading-none m-0 uppercase tracking-tight flex"
             >
-              {"WITH MEANING".split("").map((char, index) => (
+              {"EXPERIENCES".split("").map((char, index) => (
                 <span key={index} className="overflow-hidden inline-block h-[1.15em] relative">
                   <motion.span variants={letterVariants} className="inline-block relative">
                     {char === " " ? "\u00A0" : char}
@@ -348,7 +348,7 @@ function FeaturedWorksSection() {
           style={{ fontFamily: "'Anton', sans-serif", transform: "scaleY(1.25)" }}
           className="text-[17vw] md:text-[15vw] lg:text-[15vw] leading-none m-0 uppercase tracking-tight flex justify-center w-full"
         >
-          {"FEATURED WORKS".split("").map((char, index) => (
+          {"FEATURED PROJECTS".split("").map((char, index) => (
             <span 
               key={index} 
               className="overflow-hidden inline-block h-[1.15em] relative cursor-default"
@@ -368,11 +368,11 @@ function FeaturedWorksSection() {
 
         {/* Bottom Tags */}
         <div className="w-full flex justify-between items-center font-sans font-normal text-[8px] md:text-xl tracking-widest">
-          <div>DESIGN INSIGHTS</div>
+          <div>WEB SOLUTIONS</div>
           <div className="flex items-center gap-2 md:gap-3">
-            <span className="bg-theme-950 text-[#EBEAE4] px-3 md:px-4 py-1.5 rounded-full">CONCEPTUAL</span>
-            <span className="bg-theme-950 text-[#EBEAE4] px-3 md:px-4 py-1.5 rounded-full">EXPRESSIVE</span>
-            <span className="bg-theme-950 text-[#EBEAE4] px-3 md:px-4 py-1.5 rounded-full">IMMERSIVE</span>
+            <span className="bg-theme-950 text-[#EBEAE4] px-3 md:px-4 py-1.5 rounded-full">SCALABLE</span>
+            <span className="bg-theme-950 text-[#EBEAE4] px-3 md:px-4 py-1.5 rounded-full">RESPONSIVE</span>
+            <span className="bg-theme-950 text-[#EBEAE4] px-3 md:px-4 py-1.5 rounded-full">INNOVATIVE</span>
           </div>
         </div>
 

@@ -166,8 +166,8 @@ export default function Footer() {
         <div className="col-span-4 flex flex-col gap-2 text-sm md:text-base font-bold tracking-wider text-theme-950">
           <FooterSocialLink title="INSTAGRAM" href="https://instagram.com" />
           <FooterSocialLink title="LINKEDIN" href="https://linkedin.com" />
-          <FooterSocialLink title="BEHANCE" href="https://behance.net" />
-          <FooterSocialLink title="EMAIL" href="mailto:contact@bantypatel.com" />
+          <FooterSocialLink title="GITHUB" href="https://github.com" />
+          <FooterSocialLink title="EMAIL" href="mailto:hello@bantypatel.com" />
         </div>
 
         {/* Center: Back To Top */}
@@ -178,13 +178,13 @@ export default function Footer() {
         {/* Right: Navigation Links */}
         <div className="col-span-4 flex flex-col items-end gap-2 text-sm md:text-base font-bold tracking-wider text-theme-950">
           <FooterLink title="HOME" to="/" />
-          <FooterLink title="WORKS" to="/projects" />
-          <FooterLink title="BREAK" to="/services" />
+          <FooterLink title="PROJECTS" to="/projects" />
+          <FooterLink title="SERVICES" to="/services" />
           <FooterLink title="ABOUT" to="/about" />
         </div>
       </div>
 
-      {/* Giant "LET'S TALK" Marquee Bar */}
+      {/* Giant "LET'S BUILD SOMETHING AMAZING" Marquee Bar */}
       <div className="w-full bg-[#352213] text-[#EBEAE4] py-8 md:py-12 overflow-hidden flex items-center">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
@@ -193,15 +193,15 @@ export default function Footer() {
         >
           <span 
             style={{ fontFamily: "'Anton', sans-serif" }}
-            className="text-[12vw] font-normal uppercase leading-none tracking-tight mr-8 select-none"
+            className="text-[8vw] font-normal uppercase leading-none tracking-tight mr-8 select-none"
           >
-            LET'S TALK LET'S TALK LET'S TALK LET'S TALK LET'S TALK LET'S TALK&nbsp;
+            LET'S BUILD SOMETHING AMAZING LET'S BUILD SOMETHING AMAZING&nbsp;
           </span>
           <span 
             style={{ fontFamily: "'Anton', sans-serif" }}
-            className="text-[12vw] font-normal uppercase leading-none tracking-tight mr-8 select-none"
+            className="text-[8vw] font-normal uppercase leading-none tracking-tight mr-8 select-none"
           >
-            LET'S TALK LET'S TALK LET'S TALK LET'S TALK LET'S TALK LET'S TALK&nbsp;
+            LET'S BUILD SOMETHING AMAZING LET'S BUILD SOMETHING AMAZING&nbsp;
           </span>
         </motion.div>
       </div>
@@ -212,13 +212,13 @@ export default function Footer() {
         <div className="flex items-center gap-6 md:gap-8">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-theme-950 animate-pulse" />
-            <span>NEW YORK, US</span>
+            <span>SURAT, INDIA</span>
           </div>
           <div className="hidden sm:block">
             {nyTime}
           </div>
           <div className="hidden lg:block">
-            36.7783° N, 119.4179°
+            21.1702° N, 72.8311° E
           </div>
         </div>
 

@@ -4,88 +4,88 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const projects = [
   {
-    title: "Home in a Hot Pot",
-    slug: "home-in-a-hot-pot",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/hotpot_styleframe18-1.webp",
-    video: "https://jasminegunarto.com/wp-content/uploads/2025/09/f-hotpot.mp4",
-    tags: ["Concept", "Design", "Motion"],
-  },
-  {
-    title: "FLOW",
-    slug: "flow-studio-branding",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/flow_stickers-scaled-2.webp",
-    video: "", // Flow has no video loop, just image
-    tags: ["Art Direction", "Concept", "Design"],
-  },
-  {
-    title: "PreCollege '25",
-    slug: "pre-college-2025",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/precollege_still-scaled-1.webp",
-    video: "https://jasminegunarto.com/wp-content/uploads/2025/12/f-precollege.mp4",
-    tags: ["Concept", "Design", "Motion"],
-  },
-  {
-    title: "The Taste Gap",
-    slug: "the-taste-gap-visual-essay",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_p03_Frame08-1.webp",
+    title: "Globe Gateways",
+    slug: "globe-gateways",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
     video: "",
-    tags: ["Concept", "Design", "Motion"],
+    tags: ["React", "CSS", "Frontend"],
   },
   {
-    title: "PINC",
-    slug: "pinc",
-    image: "https://jasminegunarto.com/wp-content/uploads/2025/12/f-pinc.mp4",
-    video: "https://jasminegunarto.com/wp-content/uploads/2025/12/f-pinc.mp4",
-    tags: ["Concept", "Design", "Motion"],
-  },
-  {
-    title: "National Ad Council",
-    slug: "national-ad-council",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_praina_nac.mp4",
-    video: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_praina_nac.mp4",
-    tags: ["Concept", "Design", "Motion"],
-  },
-  {
-    title: "Telemundo",
-    slug: "telemundo",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_proj3_finalpass_1920x1080_3-5sec_v01.mp4",
-    video: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_proj3_finalpass_1920x1080_3-5sec_v01.mp4",
-    tags: ["Design", "Motion"],
-  },
-  {
-    title: "Vote Boldly",
-    slug: "vote-boldly",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/featuredworks_voteboldly.mp4",
-    video: "https://jasminegunarto.com/wp-content/uploads/2026/01/featuredworks_voteboldly.mp4",
-    tags: ["Concept", "Design", "Motion"],
-  },
-  {
-    title: "Moving Poster",
-    slug: "moving-poster-shinichi-maruyama",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_poster_v11-1.mp4",
-    video: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_poster_v11-1.mp4",
-    tags: ["Design", "Motion"],
-  },
-  {
-    title: "Nature + Abstraction",
-    slug: "nature-abstraction",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/1_nature_begin_1.webp",
+    title: "Travel Booking System",
+    slug: "travel-booking-system",
+    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80",
     video: "",
-    tags: ["Design", "Motion"],
+    tags: ["Node.js", "Express", "Backend"],
   },
   {
-    title: "Einstein's Dreams",
-    slug: "einsteins-dreams-title-sequence",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/01/jgunarto_titles_frame07_v13-1.webp",
+    title: "Portfolio Website",
+    slug: "portfolio-website",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     video: "",
-    tags: ["Concept", "Design", "Motion"],
+    tags: ["React", "Framer Motion", "Creative"],
   },
   {
-    title: "Demo Reel",
-    slug: "demo-reel",
-    image: "https://jasminegunarto.com/wp-content/uploads/2026/02/jgunarto_demoreel_compressed_1.mp4",
-    video: "https://jasminegunarto.com/wp-content/uploads/2026/02/jgunarto_demoreel_compressed_1.mp4",
-    tags: ["Motion", "Design"],
+    title: "Admin Dashboard",
+    slug: "admin-dashboard",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["React", "Recharts", "Frontend"],
+  },
+  {
+    title: "Package Management System",
+    slug: "package-management-system",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["Node.js", "MySQL", "Backend"],
+  },
+  {
+    title: "Authentication System",
+    slug: "authentication-system",
+    image: "https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["JWT", "bcrypt", "Security"],
+  },
+  {
+    title: "MERN Blog Platform",
+    slug: "mern-blog-platform",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["MongoDB", "Express", "React"],
+  },
+  {
+    title: "E-Commerce Store",
+    slug: "e-commerce-store",
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["MERN Stack", "Redux", "Fullstack"],
+  },
+  {
+    title: "Student Management System",
+    slug: "student-management-system",
+    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["React", "Node.js", "Fullstack"],
+  },
+  {
+    title: "Weather App",
+    slug: "weather-app",
+    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["React", "API", "Frontend"],
+  },
+  {
+    title: "Task Manager",
+    slug: "task-manager",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["Node.js", "MongoDB", "Backend"],
+  },
+  {
+    title: "API Integration Projects",
+    slug: "api-integration-projects",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    video: "",
+    tags: ["REST API", "Axios", "Backend"],
   }
 ];
 
@@ -99,7 +99,6 @@ export default function Projects() {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [videoTime, setVideoTime] = useState("00:00:00");
-  const [isPlaying, setIsPlaying] = useState(false);
   const lastScrollTime = useRef(0);
 
   // Throttled mouse wheel handler to scroll embla horizontally
@@ -233,7 +232,6 @@ export default function Projects() {
       v.pause();
       v.currentTime = 0;
     });
-    setIsPlaying(false);
     setVideoTime("00:00:00");
 
     if (!emblaApi) return;
@@ -246,7 +244,6 @@ export default function Projects() {
       const playVideo = async () => {
         try {
           await video.play();
-          setIsPlaying(true);
         } catch (err) {
           console.log("Autoplay failed:", err);
         }
@@ -305,7 +302,7 @@ export default function Projects() {
         </div>
 
         <div className="w-[20vw] flex justify-end text-[11px] font-bold tracking-widest text-[#EBEAE4]/60">
-          CURATED WORKS
+          FEATURED PROJECTS
         </div>
       </div>
 
@@ -432,12 +429,10 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Right: PLAYING status dot */}
+        {/* Right: LIVE status dot */}
         <div className="w-[25vw] flex items-center justify-end gap-2 font-mono text-[11px] md:text-xs tracking-widest text-[#EBEAE4]/60">
-          {isPlaying && (
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          )}
-          <span>{isPlaying ? "PLAYING" : "PAUSED"}</span>
+          <span className={`w-1.5 h-1.5 rounded-full ${activeIndex % 2 === 0 ? "bg-emerald-500 animate-pulse" : "bg-neutral-500"}`} />
+          <span>{activeIndex % 2 === 0 ? "LIVE" : "ARCHIVED"}</span>
         </div>
 
       </div>

@@ -34,22 +34,22 @@ export default function Navbar() {
 
   const staggeredMenuItems = [
     { label: 'HOME', ariaLabel: 'Go to home page', link: '/' },
-    { label: 'WORKS', ariaLabel: 'View our projects', link: '/projects' },
-    { label: 'BREAK', ariaLabel: 'View our services', link: '/services' },
+    { label: 'PROJECTS', ariaLabel: 'View our projects', link: '/projects' },
+    { label: 'SERVICES', ariaLabel: 'View our services', link: '/services' },
     { label: 'ABOUT', ariaLabel: 'Learn about us', link: '/about' },
   ];
 
   const menuItems = [
     { title: 'HOME', to: '/' },
-    { title: 'WORKS', to: '/projects' },
-    { title: 'BREAK', to: '/services' },
+    { title: 'PROJECTS', to: '/projects' },
+    { title: 'SERVICES', to: '/services' },
     { title: 'ABOUT', to: '/about' },
   ];
 
   const socialItems = [
-    { label: 'Twitter', link: 'https://twitter.com' },
     { label: 'GitHub', link: 'https://github.com' },
-    { label: 'LinkedIn', link: 'https://linkedin.com' }
+    { label: 'LinkedIn', link: 'https://linkedin.com' },
+    { label: 'Instagram', link: 'https://instagram.com' }
   ];
 
   return (
@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Pulsing indicator dot and City */}
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-[#EBEAE4]" />
-          <span>NEW YORK, US</span>
+          <span>SURAT, INDIA</span>
         </div>
 
         {/* Real-time Clock */}
@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* Coordinates */}
         <div className="hidden lg:block text-[#EBEAE4]">
-          36.7783° N, 119.4179°
+          21.1702° N, 72.8311° E
         </div>
       </div>
 
