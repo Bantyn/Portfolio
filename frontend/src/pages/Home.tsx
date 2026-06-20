@@ -16,14 +16,25 @@ const letterVariants: Variants = {
 function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [windowSize, setWindowSize] = useState({ width: 1200, height: 800 });
-  const isFirstLoad = !(window as any).hasPreloaderRun;
+  const [isReady, setIsReady] = useState(() => !!(window as any).hasPreloaderRun);
+
+  useEffect(() => {
+    if (isReady) return;
+    const handleStartExit = () => {
+      setIsReady(true);
+    };
+    window.addEventListener("preloaderStartExit", handleStartExit);
+    return () => {
+      window.removeEventListener("preloaderStartExit", handleStartExit);
+    };
+  }, [isReady]);
 
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
         staggerChildren: 0.04,
-        delayChildren: isFirstLoad ? 3.5 : 0.15,
+        delayChildren: 0.15,
       }
     }
   };
@@ -75,9 +86,9 @@ function HeroSection() {
         {/* Huge Bold Headline */}
         <motion.div 
           initial={{ y: "30vh" }}
-          animate={{ y: "0vh" }}
+          animate={isReady ? { y: "0vh" } : { y: "30vh" }}
           transition={{
-            delay: isFirstLoad ? 4.8 : 0.2,
+            delay: 0.2,
             duration: 1.25,
             ease: [0.76, 0, 0.24, 1]
           }}
@@ -87,7 +98,7 @@ function HeroSection() {
           <motion.h1 
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            animate={isReady ? "visible" : "hidden"}
             style={{ fontFamily: "'Anton', sans-serif" }}
             className="text-[10.5vw] md:text-[12vw] lg:text-[16.5vw] font-normal tracking-wide text-center uppercase leading-none select-none text-theme-950 w-full flex justify-center flex-nowrap whitespace-nowrap"
           >
@@ -110,9 +121,9 @@ function HeroSection() {
         {/* Middle Grid (Left text - Center space - Right text) */}
         <motion.div 
           initial={{ y: "55vh" }}
-          animate={{ y: "0vh" }}
+          animate={isReady ? { y: "0vh" } : { y: "55vh" }}
           transition={{
-            delay: isFirstLoad ? 4.8 : 0.2,
+            delay: 0.2,
             duration: 1.25,
             ease: [0.76, 0, 0.24, 1]
           }}
@@ -157,8 +168,8 @@ function HeroSection() {
               {/* Shutter down load animation overlay */}
               <motion.div
                 initial={{ y: "0%" }}
-                animate={{ y: "100%" }}
-                transition={{ delay: isFirstLoad ? 5.8 : 0.8, duration: 1.25, ease: [0.76, 0, 0.24, 1] }}
+                animate={isReady ? { y: "100%" } : { y: "0%" }}
+                transition={{ delay: 0.8, duration: 1.25, ease: [0.76, 0, 0.24, 1] }}
                 className="absolute inset-0 bg-[#EBEAE4] z-10"
               />
               <video 
@@ -189,9 +200,9 @@ function HeroSection() {
         {/* Bottom Footer Line */}
         <motion.div 
           initial={{ y: "25vh" }}
-          animate={{ y: "0vh" }}
+          animate={isReady ? { y: "0vh" } : { y: "25vh" }}
           transition={{
-            delay: isFirstLoad ? 4.8 : 0.2,
+            delay: 0.2,
             duration: 1.25,
             ease: [0.76, 0, 0.24, 1]
           }}

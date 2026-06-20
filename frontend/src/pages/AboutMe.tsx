@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { motion, type Variants } from 'motion/react';
 import HoverCharacter from '@/components/HoverCharacter';
 
@@ -13,14 +14,25 @@ const letterVariants: Variants = {
 };
 
 function AboutMe() {
-  const isFirstLoad = !(window as any).hasPreloaderRun;
+  const [isReady, setIsReady] = useState(() => !!(window as any).hasPreloaderRun);
+
+  useEffect(() => {
+    if (isReady) return;
+    const handleStartExit = () => {
+      setIsReady(true);
+    };
+    window.addEventListener("preloaderStartExit", handleStartExit);
+    return () => {
+      window.removeEventListener("preloaderStartExit", handleStartExit);
+    };
+  }, [isReady]);
 
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
         staggerChildren: 0.04,
-        delayChildren: isFirstLoad ? 3.5 : 0.15,
+        delayChildren: 0.15,
       }
     }
   };
@@ -34,9 +46,9 @@ function AboutMe() {
         {/* Big Animated Heading */}
         <motion.div
           initial={{ y: "10vh", opacity: 0 }}
-          animate={{ y: "0vh", opacity: 1 }}
+          animate={isReady ? { y: "0vh", opacity: 1 } : { y: "10vh", opacity: 0 }}
           transition={{
-            delay: isFirstLoad ? 4.8 : 0.2,
+            delay: 0.2,
             duration: 1.25,
             ease: [0.76, 0, 0.24, 1]
           }}
@@ -45,7 +57,7 @@ function AboutMe() {
           <motion.h1
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            animate={isReady ? "visible" : "hidden"}
             style={{ fontFamily: "'Anton', sans-serif" }}
             className="text-[11vw] md:text-[12vw] lg:text-[15.5vw] font-normal tracking-wide text-center uppercase leading-none select-none text-[#EBEAE4] w-full flex justify-center flex-nowrap whitespace-nowrap"
           >
@@ -68,9 +80,9 @@ function AboutMe() {
         {/* Media Frame & Labels Container */}
         <motion.div
           initial={{ y: "15vh", opacity: 0 }}
-          animate={{ y: "0vh", opacity: 1 }}
+          animate={isReady ? { y: "0vh", opacity: 1 } : { y: "15vh", opacity: 0 }}
           transition={{
-            delay: isFirstLoad ? 5.0 : 0.4,
+            delay: 0.4,
             duration: 1.25,
             ease: [0.76, 0, 0.24, 1]
           }}
@@ -81,9 +93,9 @@ function AboutMe() {
             {/* Metadata labels above the image */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 0.6, y: 0 }}
+              animate={isReady ? { opacity: 0.6, y: 0 } : { opacity: 0, y: 10 }}
               transition={{
-                delay: isFirstLoad ? 5.4 : 0.6,
+                delay: 0.6,
                 duration: 1,
                 ease: [0.76, 0, 0.24, 1]
               }}
@@ -98,8 +110,8 @@ function AboutMe() {
               {/* Shutter down load animation overlay */}
               <motion.div
                 initial={{ y: "0%" }}
-                animate={{ y: "100%" }}
-                transition={{ delay: isFirstLoad ? 5.8 : 0.8, duration: 1.25, ease: [0.76, 0, 0.24, 1] }}
+                animate={isReady ? { y: "100%" } : { y: "0%" }}
+                transition={{ delay: 0.8, duration: 1.25, ease: [0.76, 0, 0.24, 1] }}
                 className="absolute inset-0 bg-[#4C5B04] z-10"
               />
 
@@ -113,9 +125,9 @@ function AboutMe() {
             {/* Social CTA Button Pills below the image */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{
-                delay: isFirstLoad ? 5.6 : 0.7,
+                delay: 0.7,
                 duration: 1.25,
                 ease: [0.76, 0, 0.24, 1]
               }}
@@ -143,9 +155,9 @@ function AboutMe() {
         {/* Scroll indicator footer line */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 0.6 }}
+          animate={isReady ? { y: 0, opacity: 0.6 } : { y: 20, opacity: 0 }}
           transition={{
-            delay: isFirstLoad ? 6.0 : 1.0,
+            delay: 1.0,
             duration: 1.25,
             ease: [0.76, 0, 0.24, 1]
           }}

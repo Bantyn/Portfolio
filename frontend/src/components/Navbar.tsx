@@ -4,7 +4,18 @@ import { motion } from 'motion/react';
 import StaggeredMenu from './ReactBits/StaggeredMenu';
 export default function Navbar() {
   const [nyTime, setNyTime] = useState('');
-  const isFirstLoad = !(window as any).hasPreloaderRun;
+  const [isReady, setIsReady] = useState(() => !!(window as any).hasPreloaderRun);
+
+  useEffect(() => {
+    if (isReady) return;
+    const handleStartExit = () => {
+      setIsReady(true);
+    };
+    window.addEventListener("preloaderStartExit", handleStartExit);
+    return () => {
+      window.removeEventListener("preloaderStartExit", handleStartExit);
+    };
+  }, [isReady]);
 
   useEffect(() => {
     const updateTime = () => {
@@ -55,9 +66,9 @@ export default function Navbar() {
   return (
     <motion.nav 
       initial={{ y: "-100%", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      animate={isReady ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 }}
       transition={{
-        delay: isFirstLoad ? 4.8 : 0.2,
+        delay: 0.2,
         duration: 1.2,
         ease: [0.76, 0, 0.24, 1]
       }}

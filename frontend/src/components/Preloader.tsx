@@ -23,6 +23,8 @@ export default function Preloader() {
     // Start exit sequence after 3.2 seconds
     const timerExit = setTimeout(() => {
       setIsVisible(false);
+      (window as any).hasPreloaderRun = true;
+      window.dispatchEvent(new Event('preloaderStartExit'));
     }, 3200);
 
     return () => {
@@ -40,7 +42,6 @@ export default function Preloader() {
     <AnimatePresence
       onExitComplete={() => {
         document.body.style.overflow = '';
-        (window as any).hasPreloaderRun = true;
       }}
     >
       {isVisible && (
